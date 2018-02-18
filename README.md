@@ -2,7 +2,7 @@
 
 Gallery for my pictures made with [Sigal](https://github.com/saimn/sigal) (Python library).
 
-## How to add a new album
+## Add a new album (and deploy)
 
 Create the directory:
 
@@ -12,3 +12,10 @@ Create the directory:
     > Title: [put the title of the album here]  
       Thumbnail: [put here the name of the file to be the cover of the album]
 4. `deploy.sh`
+
+## View albums in development
+
+~~~console
+$> sigal build
+$> sigal serve
+~~~
