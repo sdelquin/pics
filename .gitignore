@@ -2,3 +2,4 @@ _build
 pictures
 .DS_Store
 *.pyc
+.vscode
