@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sigal build
+pipenv run sigal build
 rsync -avhz --delete _build/* production:~/pics/
