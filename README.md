@@ -6,9 +6,9 @@ Gallery for my pictures made with [Sigal](https://github.com/saimn/sigal) (Pytho
 
 Create the directory:
 
-1. `mkdir pictures/album_year`
-2. `cp *.jpg pictures/album_year/`
-3. `vi pictures/album_year/index.md`
+1. `mkdir pictures/YYMM_album`
+2. `cp *.jpg pictures/YYMM_album/`
+3. `vi pictures/YYMM_album/index.md`
     > Title: [put the title of the album here]  
       Thumbnail: [put here the name of the file to be the cover of the album]
 4. `deploy.sh`
