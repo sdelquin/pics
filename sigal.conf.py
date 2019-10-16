@@ -169,8 +169,7 @@ ignore_files = []
 # use_assets_cdn = True
 
 # A list of links (tuples (title, URL))
-links = [("Instagram", "http://instagram.com/sdelquin"),
-         ("Twitter", "http://twitter.com/sdelquin")]
+links = [("sdelquin.me", "https://sdelquin.me")]
 
 # Google Analytics tracking code (UA-xxxx-x)
 # google_analytics = ""
