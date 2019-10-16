@@ -1,4 +1,4 @@
 #!/bin/bash
 
 pipenv run sigal build
-rsync -avhz --delete _build/* production:~/pics/
+rsync -avhz --delete _build/* cloud:~/pics/
