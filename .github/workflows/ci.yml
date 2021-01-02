@@ -7,12 +7,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
       - name: Install Python dependencies
         run: |
-          pip install wheel
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Build site
-        run: python -m sigal build
+        run: sigal build
       - name: Sync files with production server
         uses: burnett01/rsync-deployments@4.1
         with:
