@@ -16,7 +16,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Build site
-        run: sigal build
+        run: sigal build $GITHUB_WORKSPACE
       - name: Sync files with production server
         uses: burnett01/rsync-deployments@4.1
         with:
