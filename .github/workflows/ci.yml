@@ -1,0 +1,22 @@
+name: Deploy
+on: push
+jobs:
+  build:
+    name: Build site and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Build site
+        run: sigal build
+      - name: Sync files with production server
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avhz --delete
+          path: _build/*
+          remote_host: pics.sdelquin.me
+          remote_path: ${{ secrets.REMOTE_BUILD_PATH }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.REMOTE_KEY }}
