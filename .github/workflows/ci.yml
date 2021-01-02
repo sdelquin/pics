@@ -16,12 +16,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Build site
-        run: sigal build $GITHUB_WORKSPACE
+        run: sigal build $GITHUB_WORKSPACE /tmp/build/
       - name: Sync files with production server
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avhz --delete
-          path: _build/*
+          path: /tmp/build/*
           remote_host: pics.sdelquin.me
           remote_path: ${{ secrets.REMOTE_BUILD_PATH }}
           remote_user: ${{ secrets.REMOTE_USER }}
